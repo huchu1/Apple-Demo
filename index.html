@@ -36,14 +36,16 @@
         })
     </script>
     <style>
+      * {margin : 0; padding: 0;}
         .navbar{
             background-color: black;
             border: none;
         }
 
         .navbar a{
-            color: white !important;
+            color: #d3d3d3 !important;
         }
+        .navbar a:hover{color: #f5f5f7 !important; transition: 1s;}
 
         .navbar-brand{
             text-indent: -99999px !important;
@@ -51,7 +53,7 @@
             background-repeat: no-repeat;
         }
 
-        .container-padding{padding-top: 80px;padding-bottom: 80px;}
+        .container-padding{padding-top: 80px; padding-bottom: 80px;}
         .carousel-inner img {
             width: 100%; /* Set width to 100% */
             height: 700px !important;
@@ -72,13 +74,74 @@
             background-color: black;
         }
 
+        .slide{
+          margin-bottom: 15px;
+        }
+
+        .banner{
+          background-image: url('img/pic10.jpg') !important;
+          background-size: cover;
+          color: white;
+          width: 100%;
+          margin-bottom: 15px;
+        }
+
+        .banner2{
+          cursor: pointer;
+          background-image: url('img/pic11.jpg') !important;
+          background-size: cover;
+          height: 617px;
+          margin-bottom: 15px;
+        }
+
+        .headline{
+          font-size: 48px;
+          font-weight: 600;
+        }
+
+        .subline{
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        .morelink{
+          color: #06c;
+          font-weight: 400;
+          font-size: 20px;
+        }
+
         .bg1{            
             background-image: url('img/pic04.jpg') !important;
             background-size: cover;
+            vertical-align: middle;
+            color: white;
+            font-weight: 400;
+            cursor: pointer;
         }
         .bg2{            
             background-image: url('img/pic05.jpg') !important;
             background-size: cover;
+            color: rgb(109, 109, 109);
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .bg3{            
+            background-image: url('img/pic06.jpg') !important;
+            background-size: cover;
+            color: white;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .bg4{            
+            background-image: url('img/pic07.jpg') !important;
+            background-size: cover;
+            color: white;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .morelink2{
+          color: #06c;
         }
 
         .pc-img{display: block !important;}
@@ -86,10 +149,15 @@
         #pc-footer{display: block !important;}
         #mobile-footer{display: none !important;}
 
+        footer{background-color: #1d1d1f; color: #535355;}
+        #mobile-footer{margin: 15px 15px 0 15px; padding: 15px 0;}
+        .footer-a a{color: #535355; cursor: pointer;}
+
         @media (max-width: 768px) {
             .carousel-caption {
                 display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
             }
+            .navbar-brand{margin-left: 20px;}
             .pc-img{display: none !important;}
             .mobile-img{display: block !important;}
             #pc-footer{display: none !important;}
@@ -154,10 +222,10 @@
           </div>
       
           <div class="item">
-            <img class="pc-img" src="img/pic03.jpg" alt="Apple Watch">
-            <img class="mobile-img" src="img/pic03_mobile.jpg" alt="Apple Watch">
+            <img class="pc-img" src="img/pic03.jpg" alt="iPone">
+            <img class="mobile-img" src="img/pic03_mobile.jpg" alt="iPone">
             <div class="carousel-caption">
-              <h3>Watch</h3>
+              <h3>iPone</h3>
               <!-- <p>Even though the traffic was a mess, we had the best time.</p> -->
             </div>
           </div>
@@ -174,84 +242,64 @@
         </a>
       </div>
     <!-- Carousel-->
-    <div class="container-fluid text-center">
-        <div class="container container-padding">
-            <h3>Unleashed</h3>
-            <p>Watch the Apple Event tomorrow a 10 a.m.PDT</p>
-            <p>learn more...</p>
+    <div class="container-fluid text-center banner">
+        <div class="container container-padding" style="cursor: pointer;">
+            <h3 class="headline">Unleashed</h3>
+            <p class="subline">Watch the Apple Event tomorrow a 10 a.m.PDT</p>
+            <a style="color: white;"><p>learn more...</p></a>
         </div>
     </div>
-    <div class="container text-center container-padding">
+    <div class="text-center container-padding banner2">
         <div class="row">
             <div class="col-sm-12">
-                <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
+                <p class="headline">iPone 13 Pro</p>
+                <p class="subline">Oh. So. Pro.</p>
+                <p class="morelink"><a>Learn more</a> > <a>Buy</a> ></p>
             </div>
         </div>
     </div>
-    <div id="Store" class="container text-center container-padding">
-        <h3>Store</h3>
+    <div id="Store" class="text-center">
         <div class="row">
-            <div class="col-sm-6 bg1" style="padding-bottom:100px;">
+            <div class="col-sm-6 bg1" style="padding:100px;">
                 <p>New</p>
                 <p>Apple Watch</p>
                 <p>Series7</p>
                 <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
+                <p class="morelink2"><a>Learn more</a> > <a>Buy</a> ></p>
             </div>
-            <div class="col-sm-6 bg2" style="padding-bottom:100px;">
+            <div class="col-sm-6 bg2" style="padding:100px 0;">
                 <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
+                <p>AirPods</p>
+                <p>Series3</p>
+                <p>Spatial Audio</p>
+                <p class="morelink2"><a>Learn more</a> > <a>Buy</a> ></p>
             </div>
         </div>
     </div>
-    <div class="container text-center container-padding">
+    <div class="text-center">
         <div class="row">
-            <div class="col-sm-6" style="padding-bottom:100px;">
+            <div class="col-sm-6 bg3" style="padding:100px 0;">
                 <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
+                <p>HomePod</p>
+                <p>Mini</p>
+                <p>Room-filling sound</p>
+                <p class="morelink2"><a>Learn more</a> > <a>Buy</a> ></p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg4" style="padding:100px 0;">
                 <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
-            </div>
-        </div>
-    </div>
-    <div class="container text-center container-padding">
-        <div class="row">
-            <div class="col-sm-6" style="padding-bottom:100px;">
-                <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
-            </div>
-            <div class="col-sm-6">
-                <p>New</p>
-                <p>Apple Watch</p>
-                <p>Series7</p>
-                <p>Full sreen ahead</p>
-                <p>Learn more > Buy ></p>
+                <p>MacBook</p>
+                <p>Pro</p>
+                <p>Supercharged for pros</p>
+                <p class="morelink2"><a>Learn more</a> > <a>Buy</a> ></p>
             </div>
         </div>
     </div>
 
+
     <!--kakaoMap-------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <div id="Loc" class="container text-center">
         <h3>Apple Korea</h3>
-        <div id="map" style="width:100%;height:350px;"></div>
+        <div id="map" style="width:100%; height:350px;"></div>
     </div>
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a387dff9843c667832c1f6bb75bf6a8"></script>
@@ -278,72 +326,73 @@
 
     <!-- footer-------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- desktop------------------------------------------------ -->
+  <footer>
     <div class="container container-padding" id="pc-footer">
-        <div class="row">
+        <div class="row footer-a">
             <div class="col-sm-3">
-                Shop and Learn<br>
-                Mac<br>
-                iPad<br>
-                iPhone<br>
-                Watch<br>
-                TV<br>
-                Music<br>
-                AirPods<br>
-                HomePod<br>
-                iPod touch<br>
-                AirTag<br>
-                Accessories<br>
-                Gift Cards<br>
+                <a><b>Shop and Learn</b><br></a>
+                <a>Mac<br></a>
+                <a>iPad<br></a>
+                <a>iPhone<br></a>
+                <a>Watch<br></a>
+                <a>TV<br></a>
+                <a>Music<br></a>
+                <a>AirPods<br></a>
+                <a>HomePod<br></a>
+                <a>iPod touch<br></a>
+                <a>AirTag<br></a>
+                <a>Accessories<br></a>
+                <a>Gift Cards<br></a>
             </div>
             <div class="col-sm-3">
-                Services<br>
-                Apple Music<br>
-                Apple TV+<br>
-                Apple Fitness+<br>
-                Apple News+<br>
-                Apple Arcade<br>
-                iCloud<br>
-                Apple One<br>
-                Apple Card<br>
-                Apple Books<br>
-                Apple Podcasts<br>
-                App Store<br>
-                Account<br>
-                Manage Your Apple ID<br>
-                Apple Store Account<br>
-                iCloud.com<br>
+              <a><b>Services<br></b></a>
+              <a>Apple Music<br></a>
+              <a>Apple TV+<br></a>
+              <a>Apple Fitness+<br></a>
+                <a>Apple News+<br></a>
+                <a>Apple Arcade<br></a>
+                <a>iCloud<br></a>
+                <a>Apple One<br></a>
+                <a>Apple Card<br></a>
+                <a>Apple Books<br></a>
+                <a>Apple Podcasts<br></a>
+                <a>App Store<br></a>
+                <a>Account<br></a>
+                <a>Manage Your Apple ID<br></a>
+                <a>Apple Store Account<br></a>
+                <a>iCloud.com<br></a>
             </div>
             <div class="col-sm-3">
-                Apple Store<br>
-                Find a Store<br>
-                Shop Online<br>
-                Genius Bar<br>
-                Today at Apple<br>
-                Apple Camp<br>
-                Apple Store App<br>
-                Refurbished and Clearance<br>
-                Financing<br>
-                Apple Trade In<br>
-                Order Status<br>
-                Shopping Help<br>
+              <a><b>Apple Store<br></b></a>
+                <a>Find a Store<br></a>
+                <a>Shop Online<br></a>
+                <a>Genius Bar<br></a>
+                <a>Today at Apple<br></a>
+                <a>Apple Camp<br></a>
+                <a>Apple Store App<br></a>
+                <a>Refurbished and Clearance<br></a>
+                <a>Financing<br></a>
+                <a>Apple Trade In<br></a>
+                <a>Order Status<br></a>
+                <a>Shopping Help<br></a>
             </div>
             <div class="col-sm-3">
-                Apple Values<br>
-                Accessibility<br>
-                Education<br>
-                Environment<br>
-                Inclusion and Diversity<br>
-                Privacy<br>
-                Racial Equity and Justice<br>
-                Supplier Responsibility<br>
-                About Apple<br>
-                Newsroom<br>
-                Apple Leadership<br>
-                Career Opportunities<br>
-                Investors<br>
-                Ethics & Compliance<br>
-                Events<br>
-                Contact Apple<br>
+              <a><b>Apple Values<br></b></a>
+                <a>Accessibility<br></a>
+                <a>Education<br></a>
+                <a>Environment<br></a>
+                <a>Inclusion and Diversity<br></a>
+                <a>Privacy<br></a>
+                <a>Racial Equity and Justice<br></a>
+                <a>Supplier Responsibility<br></a>
+                <a>About Apple<br></a>
+                <a>Newsroom<br></a>
+                <a>Apple Leadership<br></a>
+                <a>Career Opportunities<br></a>
+                <a>Investors<br></a>
+                <a>Ethics & Compliance<br></a>
+                <a>Events<br></a>
+                <a>Contact Apple<br></a>
             </div>
         </div>
     </div>
@@ -452,6 +501,7 @@
         <div class="col-sm-8">Privacy Policy | Terms of Use | Sales and Refunds | Legal Site Map</div>
       </div>
     </div>
+  </footer>
     <!-- footer---------------- -->
 </body>
 </html>
